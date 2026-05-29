@@ -1,5 +1,12 @@
 # Schema-As-Code 联邦自治架构
 
+&gt; ⚖️ **版权声明**：本架构文档与协议体系版权归 [Akir_weiwen] 所有，详见 [LICENSE](./LICENSE) 与 [COPYRIGHT](./COPYRIGHT)。
+
+## 联邦自治分层
+...
+
+# Schema-As-Code 联邦自治架构
+
 &gt; 声明式语义治理网格（Declarative Semantic Governance Mesh）的意图协议与工程化实现。
 
 ## 联邦自治分层
