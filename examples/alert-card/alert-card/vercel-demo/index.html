@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schema-As-Code 语义治理演示</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔒 Schema-As-Code 语义治理演示</h1>
+            <p>意图协议：<code>intent-schema-compiler/治理层/response-schema.yaml</code></p>
+        </header>
+
+        <div class="main">
+            <!-- 左侧：控制面板 -->
+            <aside class="control-panel">
+                <h2>模拟 LLM 输出</h2>
+                <select id="llm-selector">
+                    <option value="valid">✅ 合法输出（P0 + 完整根因）</option>
+                    <option value="synonym">❌ 同义词漂移（"严重"替代 P0）</option>
+                    <option value="length">❌ 文案过短（根因 < 10 字符）</option>
+                    <option value="confidence">❌ 置信度越界（1.5 > 1.0）</option>
+                    <option value="safety">❌ 安全违规（建议自动修复）</option>
+                    <option value="multi">❌ 复合违规（3 条红线）</option>
+                </select>
+
+                <div class="schema-preview">
+                    <h3>约束 Schema（左侧）</h3>
+                    <pre id="schema-display"></pre>
+                </div>
+
+                <div class="raw-json">
+                    <h3>LLM 原始输出（右侧）</h3>
+                    <pre id="json-display"></pre>
+                </div>
+            </aside>
+
+            <!-- 中间：推演引擎 -->
+            <section class="validator-engine">
+                <h2>⚡ Four-Tier Validator 推演</h2>
+                <div id="tier-results" class="tier-list">
+                    <!-- 动态填充 -->
+                </div>
+                <div id="final-verdict" class="verdict">
+                    <!-- PASS / BLOCK -->
+                </div>
+            </section>
+
+            <!-- 右侧：渲染结果 -->
+            <section class="render-result">
+                <h2>🖥️ 用户界面渲染</h2>
+                <div id="alert-card" class="alert-card">
+                    <!-- 动态渲染 -->
+                </div>
+                <div id="block-overlay" class="block-overlay hidden">
+                    <div class="block-modal">
+                        <h3>🚫 意图协议拦截</h3>
+                        <p id="block-reason"></p>
+                        <button onclick="app.reset()">重置演示</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>
+                控制平面：<a href="https://github.com/2436041978-ops/intent-schema-compiler" target="_blank">intent-schema-compiler</a> |
+                完整架构：<a href="#" target="_blank">schema-as-code</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
