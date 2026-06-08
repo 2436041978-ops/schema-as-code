@@ -1,33 +1,16 @@
-# Schema-As-Code 联邦自治架构
+# Schema-As-Code：设计意图的形式化契约
 
-&gt; ⚖️ **版权声明**：本架构文档与协议体系版权归 [Akir_weiwen] 所有，详见 [LICENSE](./LICENSE) 与 [COPYRIGHT](./COPYRIGHT)。
+&gt; 我是体验架构设计师，专注 AI 界面的语义治理。
+&gt; 这个仓库收录了我关于"设计意图→语义契约→工程实现"的完整思考，
+&gt; 以及一个可运行的概念验证（DEMO）。
 
-## 联邦自治分层
+## 核心问题
+当 LLM 开始生成界面内容，设计意图如何在概率性输出中不漂移？
+
+## 五篇核心论述
+1. [设计意图治理：当界面从确定性走向概率性](语雀链接)
+2. [设计意图的形式化：从自然语言到机器可读](语雀链接)
 ...
 
-# Schema-As-Code 联邦自治架构
-
-&gt; 声明式语义治理网格（Declarative Semantic Governance Mesh）的意图协议与工程化实现。
-
-## 联邦自治分层
-
-| 目录 | 面向对象 | 内容 |
-|:---|:---|:---|
-| [00-federal-manifesto](./00-federal-manifesto) | 全员 | 联邦自治总纲、架构宣言、术语表、演进路线 |
-| [01-architecture-contract](./01-architecture-contract) | 架构师 + 联邦治理委员会 | 顶层架构、元规则、版本管理、组织经济学 |
-| [02-platform-implementation](./02-platform-implementation) | 平台团队（白盒） | 语义治理网格、编译推演机制、五模块节点实现 |
-| [03-domain-autonomy](./03-domain-autonomy) | Intent Steward + 域 TL | 域级自治手册、意图协议编写、沙盒豁免 |
-| [04-business-integration](./04-business-integration) | 前端/设计/AI 工程师（黑盒） | 黑盒接入指南、端到端示例、DEMO |
-| [05-federal-landing](./05-federal-landing) | 委员会 + 平台 + 各域 TL | 联邦落地手册、三阶段渐进路径 |
-
-## 语雀知识库
-
-详细文档与阅读体验见语雀：[Schema-As-Code 联邦自治](https://www.yuque.com/u222739/draddi)
-
-## 附件
-
-架构图与拓扑图原文件见 `docs/assets/`。
-
-## 控制平面载体
-
-意图协议 YAML 本体见：[intent-schema-compiler](https://github.com/2436041978-ops/intent-schema-compiler)
+## 概念验证
+在线体验 → [intent-schema-compiler/demo](链接)
